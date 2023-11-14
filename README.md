@@ -328,10 +328,9 @@ print("liczba wierszy w ktorych pierwsze slowo zawiera sie w drugim",ile_zawiera
 print("liczba anagramow",ile_anagramow)
 
 
-Oto bardziej zwięzła wersja kodu, która czyta dane bezpośrednio z pliku "dane4.txt" i znajduje najmniejszą i największą liczbę pierwszą:
 
-python
-Copy code
+
+
 def is_prime(num):
     return num > 1 and all(num % i != 0 for i in range(2, int(num**0.5) + 1))
 

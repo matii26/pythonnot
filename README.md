@@ -326,3 +326,21 @@ with open("slowa.txt") as dane:
 print("słów kończących się na A jest ",ile_na_a)
 print("liczba wierszy w ktorych pierwsze slowo zawiera sie w drugim",ile_zawiera)
 print("liczba anagramow",ile_anagramow)
+
+
+Oto bardziej zwięzła wersja kodu, która czyta dane bezpośrednio z pliku "dane4.txt" i znajduje najmniejszą i największą liczbę pierwszą:
+
+python
+Copy code
+def is_prime(num):
+    return num > 1 and all(num % i != 0 for i in range(2, int(num**0.5) + 1))
+
+with open('dane4.txt', 'r') as file:
+    numbers = [int(num) for num in file.read().split()]
+
+primes = [num for num in numbers if is_prime(num)]
+
+min_prime, max_prime = min(primes, default=None), max(primes, default=None)
+
+print("Najmniejsza liczba pierwsza:", min_prime)
+print("Największa liczba pierwsza:", max_prime)
